@@ -1,0 +1,21 @@
+# linting --> used to check typos, error, 
+
+docker-compose run --rm app sh -c "flake8"
+
+# Testing
+    # Django test suite is used
+    # Setup test per Django app
+    # Run test through Docker compose
+
+docker-compose run --rm app sh -c "python manage.py test"
+
+# Docker Commands
+
+docker build .
+docker-compose build
+
+# create project
+docker-compose run --rm app sh -c "django-admin startproject app ."
+
+# up project 
+docker-compose up
